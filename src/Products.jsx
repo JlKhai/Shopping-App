@@ -13,7 +13,7 @@ const Products = () => {
   } = useContextCustom()
   console.log(products)
   return (
-    <div className="relative ">
+    <div className="relative h-screen">
       <Navbar />
       <div className="container mx-auto flex flex-wrap justify-center gap-5 mt-10 ">
         {products.map((pd) => {
@@ -21,8 +21,8 @@ const Products = () => {
         })}
       </div>
 
-      <div className="">
-        <h1 className="container mx-auto text-center  text-gray-500  font-bold select-none bg-yellow-500 p-7 mt-12">
+      <div className="mt-auto">
+        <h1 className="container mx-auto text-center  text-gray-500  font-bold select-none bg-yellow-500 p-6 mt-12">
           Copyright &copy; 2023 JlKhai. All rights reserved.
         </h1>
       </div>

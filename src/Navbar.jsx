@@ -3,7 +3,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { FcShop } from 'react-icons/fc'
 const Navbar = () => {
   return (
-    <div className="container mx-auto flex  justify-around bg-teal-700 p-7">
+    <div className="container mx-auto flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
         <div className=" flex items-center hover:opacity-70 gap-2">
           <FcShop className=" text-4xl  " />
