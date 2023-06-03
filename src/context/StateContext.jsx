@@ -11,6 +11,7 @@ export const StateContext = createContext()
 
 export const StateContextProvider = ({ children }) => {
   const [productList, setProductList] = useState([])
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     fetchdata()
@@ -25,7 +26,12 @@ export const StateContextProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({ type: 'GET_PRODUCT', payload: productList })
-  }, [productList])
+    const filteredPd = productList.filter((item) =>
+      item.title.toLowerCase().includes(search),
+    )
+    // console.log(filteredPd)
+    dispatch({ type: 'GET_PRODUCT', payload: filteredPd })
+  }, [productList, search])
 
   const initialState = {
     products: [],
@@ -34,7 +40,7 @@ export const StateContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   // console.log(state)
-  const data = { state, dispatch }
+  const data = { state, dispatch, search, setSearch }
   return <StateContext.Provider value={data}>{children}</StateContext.Provider>
 }
 

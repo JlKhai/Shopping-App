@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import { FcShop } from 'react-icons/fc'
+import { useContextCustom } from '../context/StateContext'
 const Navbar = () => {
+  const {
+    search,
+    setSearch,
+    state: { cart },
+  } = useContextCustom()
+  // console.log(search)
+  // console.log(cart)
   return (
     <div className="container mx-auto flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
@@ -14,16 +22,20 @@ const Navbar = () => {
       </Link>
       <div className="flex gap-5 items-center">
         <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
           className=" bg-gray-300 px-2 py-2 outline-none rounded"
         />
-        <div className="relative hover:opacity-60">
-          <FaShoppingCart className=" text-yellow-400 text-3xl cursor-pointer select-none" />
-          <span className=" absolute bottom-6 left-6 h-5 w-5 rounded-[100%] flex items-center justify-center bg-white text-teal-500 cursor-pointer select-none">
-            0
-          </span>
-        </div>
+        <Link to={'/cart'}>
+          <div className="relative hover:opacity-60">
+            <FaShoppingCart className=" text-yellow-400 text-3xl cursor-pointer select-none" />
+            <span className=" absolute bottom-6 left-6 h-5 w-5 rounded-[100%] flex items-center justify-center bg-white text-teal-500 cursor-pointer select-none">
+              {cart.length}
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   )
