@@ -6,7 +6,7 @@ const Product = (props) => {
 
   const { dispatch } = useContextCustom()
   return (
-    <div className=" w-[260px] h-[360px] rounded shadow-xl hover:translate-x-2 hover:translate-y-3 p-7">
+    <div className=" w-[260px] h-[360px] rounded-lg shadow-2xl hover:translate-x-2 hover:translate-y-3 p-7">
       <img src={image} className="max-w-[100%] h-[50%] mx-auto rounded" />
       <div className="mt-4 flex flex-col h-[50%] ">
         <div className="">
@@ -19,7 +19,7 @@ const Product = (props) => {
           </p>
         </div>
         <div className="flex gap-4 mt-auto">
-          <Link to={`/detail`}>
+          <Link to={`/detail/${id}`}>
             <button
               className="select-none px-4 py-1 bg-teal-600 hover:bg-teal-800 rounded text-white"
               onClick={() => dispatch({ type: 'TO_DETAIL', payload: props })}

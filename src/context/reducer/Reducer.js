@@ -2,13 +2,17 @@ export const reducer = (state, action) => {
   switch (action.type) {
     case 'GET_PRODUCT':
       return { ...state, products: action.payload }
-    case 'TO_DETAIL':
-      return { ...state, cart: action.payload }
-
+    // case 'TO_DETAIL':
+    //   return { ...state, cart: state.cart, ...action.payload }
     case 'ADD_TO_CART':
-      // return { ...state, cart: action.payload }
-      return { ...state, cart: [...state.cart, { ...action.payload }] }
-
+      const isExisted = state.cart.find((item) => item.id === action.payload.id)
+      if (isExisted) {
+        return state
+      } else {
+        return { ...state, cart: [...state.cart, { ...action.payload }] }
+      }
+    case 'REMOVE_CART':
+      return { ...state, cart: (state.cart = []) }
     default:
       return state
   }

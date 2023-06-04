@@ -22,6 +22,7 @@ const Navbar = () => {
       </Link>
       <div className="flex gap-5 items-center">
         <input
+          // disabled={}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           type="text"
