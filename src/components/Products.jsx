@@ -26,7 +26,7 @@ const Products = () => {
       </div>
       <Group position="right">
         <Button
-          className=" bg-green-700 hover:bg-green-500 hover:translate-y-1 rounded-lg right-12 bottom-32 text-3xl px-0"
+          className=" bg-yellow-600 hover:bg-green-700 hover:translate-y-1 rounded-lg text-3xl px-0 right-5 md:right-12 bottom-32 "
           onClick={() => scrollTo({ y: 0 })}
         >
           <MdOutlineKeyboardArrowUp />

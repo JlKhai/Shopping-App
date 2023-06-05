@@ -17,7 +17,7 @@ const Detail = () => {
 
   return (
     <div className="container mx-auto h-screen w-screen flex justify-center  items-center bg-yellow-600 ">
-      <div className=" w-[560px] h-[560px] rounded-xl shadow-2xl p-10 bg-white">
+      <div className="w-[100%] md:w-[560px] h-[560px] md:rounded-xl shadow-2xl p-10 bg-white">
         <img
           src={item.image}
           className="max-w-[100%] h-[40%] mx-auto rounded"

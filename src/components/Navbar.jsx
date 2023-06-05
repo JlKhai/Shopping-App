@@ -13,21 +13,20 @@ const Navbar = () => {
   return (
     <div className="container mx-auto flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
-        <div className=" flex items-center hover:opacity-70 gap-2">
+        <div className=" flex flex-col md:flex-row items-center hover:opacity-70 md:gap-2">
           <FcShop className=" text-4xl  " />
-          <h2 className=" text-2xl font-bold text-white cursor-pointer select-none">
+          <h2 className="text-md md:text-2xl  font-bold text-white cursor-pointer select-none">
             My Shop
           </h2>
         </div>
       </Link>
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-3 md:gap-5 items-center">
         <input
-          // disabled={}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
-          className=" bg-gray-300 px-2 py-2 outline-none rounded"
+          className=" bg-gray-300 px-2 py-2 outline-none rounded "
         />
         <Link to={'/cart'}>
           <div className="relative hover:opacity-60">
