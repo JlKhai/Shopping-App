@@ -14,8 +14,8 @@ const Navbar = () => {
     <div className="container mx-auto flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
         <div className=" flex flex-col md:flex-row items-center hover:opacity-70 md:gap-2">
-          <FcShop className=" text-4xl  " />
-          <h2 className="text-md md:text-2xl  font-bold text-white cursor-pointer select-none">
+          <FcShop className="text-2xl md:text-4xl  " />
+          <h2 className="text-sm md:text-2xl  font-bold text-white cursor-pointer select-none">
             My Shop
           </h2>
         </div>
