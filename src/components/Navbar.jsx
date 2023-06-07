@@ -26,7 +26,7 @@ const Navbar = () => {
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
-          className=" bg-gray-300 px-2 py-2 outline-none rounded "
+          className=" bg-gray-300 px-2 py-2 outline-none rounded"
         />
         <Link to={'/cart'}>
           <div className="relative hover:opacity-60">
