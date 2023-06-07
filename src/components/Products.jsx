@@ -18,20 +18,20 @@ const Products = () => {
           return <Product key={pd.id} {...pd} />
         })}
       </div>
-
       <div className="mt-auto">
+        <Group position="right">
+          <Button
+            className=" bg-yellow-600 hover:bg-green-700 hover:translate-y-1 rounded-lg text-3xl px-0 right-5 md:right-12 "
+            onClick={() => scrollTo({ y: 0 })}
+          >
+            <MdOutlineKeyboardArrowUp />
+          </Button>
+        </Group>
+
         <h1 className="container mx-auto text-center  text-gray-500  font-bold select-none bg-yellow-500 p-6 mt-12">
           Copyright &copy; 2023 JlKhai. All rights reserved.
         </h1>
       </div>
-      <Group position="right">
-        <Button
-          className=" bg-yellow-600 hover:bg-green-700 hover:translate-y-1 rounded-lg text-3xl px-0 right-5 md:right-12 bottom-32 "
-          onClick={() => scrollTo({ y: 0 })}
-        >
-          <MdOutlineKeyboardArrowUp />
-        </Button>
-      </Group>
     </div>
   )
 }

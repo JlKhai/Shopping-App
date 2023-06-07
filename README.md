@@ -1,4 +1,4 @@
-#Online-Shopping-App
+##Online-Shopping-App
 
 #The Tools I used
 
@@ -12,5 +12,6 @@
 - yarn install
 - yarn run dev
 
-#What I built
-A fully responsive FakeStore app using Redux Toolkit,Tailwind Css ,Mantine ,React-icons and Fakestore Api.
+##What I built
+
+- A fully responsive FakeStore app using Redux Toolkit,Tailwind Css ,Mantine ,React-icons and Fakestore Api.
