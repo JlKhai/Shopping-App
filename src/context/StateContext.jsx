@@ -12,6 +12,7 @@ export const StateContext = createContext()
 export const StateContextProvider = ({ children }) => {
   const [productList, setProductList] = useState([])
   const [search, setSearch] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     fetchdata()
@@ -21,6 +22,7 @@ export const StateContextProvider = ({ children }) => {
     const api = await fetch(`https://fakestoreapi.com/products`)
     const data = await api.json()
     setProductList(data)
+    setIsLoading(false)
     // console.log(data)
   }
 
@@ -40,7 +42,7 @@ export const StateContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   // console.log(state)
-  const data = { state, dispatch, search, setSearch }
+  const data = { state, dispatch, search, setSearch, isLoading, setIsLoading }
   return <StateContext.Provider value={data}>{children}</StateContext.Provider>
 }
 

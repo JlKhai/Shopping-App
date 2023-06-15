@@ -64,7 +64,7 @@ const Cart = () => {
               Please fill your cart first.
             </h1>
             <Link to={'/'}>
-              <button className="mt-5 font-serif px-6 py-2 bg-green-700 hover:bg-yellow-600 focus:ring-4 focus:ring-green-700 rounded-lg text-white">
+              <button className="mt-5 font-mono text-white  hover:bg-yellow-500 btn btn-active btn-accent">
                 Fill Cart
               </button>
             </Link>

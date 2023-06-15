@@ -6,34 +6,26 @@ const Product = (props) => {
 
   const { dispatch } = useContextCustom()
   return (
-    <div className=" w-[260px] h-[360px] rounded-lg shadow-2xl hover:translate-x-2 hover:translate-y-3 p-7">
-      <img src={image} className="max-w-[100%] h-[50%] mx-auto rounded" />
-      <div className="mt-4 flex flex-col h-[50%] ">
-        <div className="">
+    <div className=" w-[260px] h-[360px] rounded-lg shadow-2xl hover:scale-110 transition duration-150 hover:ease-in-out p-7">
+      <Link to={`/detail/${id}`}>
+        <img src={image} className="max-w-[100%] h-[50%] mx-auto rounded" />
+        <div className="mt-4 flex flex-col h-[35%] ">
           <h1 className="font-semibold mb-1">{title.substring(0, 25)}...</h1>
           <p className="opacity-70 text-sm">
-            {description.substring(0, 30)}...
+            {description.substring(0, 20)}...
           </p>
           <p className=" text-lg text-red-700 font-semibold select-none">
             ${price}
           </p>
         </div>
-        <div className="flex gap-4 mt-auto">
-          <Link to={`/detail/${id}`}>
-            <button
-              className="select-none px-4 py-1 bg-teal-600 hover:bg-teal-800 rounded text-white"
-              onClick={() => dispatch({ type: 'TO_DETAIL', payload: props })}
-            >
-              Detail
-            </button>
-          </Link>
-          <button
-            className="select-none px-4 py-1 rounded bg-teal-600  hover:bg-teal-800 text-white"
-            onClick={() => dispatch({ type: 'ADD_TO_CART', payload: props })}
-          >
-            Add to Cart
-          </button>
-        </div>
+      </Link>
+      <div className=" mt-auto">
+        <button
+          className="w-[100%] select-none px-4 py-2 rounded bg-blue-500  hover:bg-blue-700 text-white"
+          onClick={() => dispatch({ type: 'ADD_TO_CART', payload: props })}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   )
