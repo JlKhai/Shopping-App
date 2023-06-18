@@ -11,7 +11,7 @@ const Navbar = () => {
   // console.log(search)
   // console.log(cart)
   return (
-    <div className="container mx-auto flex  justify-around bg-teal-700 p-5">
+    <div className="sticky top-0 z-10 flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
         <div className=" flex flex-col md:flex-row items-center hover:opacity-70 md:gap-2">
           <FcShop className="text-2xl md:text-4xl  " />

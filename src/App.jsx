@@ -4,6 +4,7 @@ import Products from './components/Products'
 import Detail from './components/Detail'
 import Cart from './components/Cart'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
   return (

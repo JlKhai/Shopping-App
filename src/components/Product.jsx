@@ -21,7 +21,7 @@ const Product = (props) => {
       </Link>
       <div className=" mt-auto">
         <button
-          className="w-[100%] select-none px-4 py-2 rounded bg-blue-500  hover:bg-blue-700 text-white"
+          className="w-[100%] select-none px-4 py-2 rounded bg-sky-500  hover:bg-sky-700 text-white"
           onClick={() => dispatch({ type: 'ADD_TO_CART', payload: props })}
         >
           Add to Cart

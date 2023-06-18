@@ -4,6 +4,7 @@ import Product from './Product'
 import { MdOutlineKeyboardArrowUp } from 'react-icons/md'
 import { useWindowScroll } from '@mantine/hooks'
 import { Loader } from '@mantine/core'
+import Footer from './Footer'
 
 const Products = () => {
   const [scroll, scrollTo] = useWindowScroll()
@@ -29,20 +30,16 @@ const Products = () => {
           />
         )}
       </div>
-      <div className="mt-auto">
-        <Group position="right">
-          <Button
-            className=" bg-yellow-600 hover:bg-yellow-700 hover:translate-y-1 rounded-lg text-3xl px-0 right-5 md:right-12 "
+      <Group position="right">
+        <Button className="hover:bg-white">
+          <MdOutlineKeyboardArrowUp
+            className=" cursor-pointer bg-yellow-600 hover:translate-y-1 rounded-t-xl text-3xl px-0 right-5 mb-2 md:right-12 "
             onClick={() => scrollTo({ y: 0 })}
-          >
-            <MdOutlineKeyboardArrowUp />
-          </Button>
-        </Group>
+          />
+        </Button>
+      </Group>
 
-        <h1 className="container mx-auto text-center  text-gray-500  font-bold select-none bg-yellow-500 p-6 mt-12">
-          Copyright &copy; 2023 JlKhai. All rights reserved.
-        </h1>
-      </div>
+      <Footer />
     </div>
   )
 }
