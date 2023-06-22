@@ -35,7 +35,7 @@ const CartBox = ({ product, incresseTotal, decreaseTotal }) => {
           </p>
           <p
             onClick={removeItem}
-            className="select-none text-sm mt-auto shadow border w-max px-2 rounded-md hover:bg-red-500 text-yellow-400 hover:text-white  cursor-pointer"
+            className="select-none text-sm mt-auto shadow border w-max px-2 rounded-md hover:bg-red-500  transition ease-in duration-300 text-yellow-400 hover:text-white  cursor-pointer"
           >
             Remove
           </p>

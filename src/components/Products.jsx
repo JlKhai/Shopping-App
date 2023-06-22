@@ -30,10 +30,10 @@ const Products = () => {
           />
         )}
       </div>
-      <Group position="right">
+      <Group position="right" className="mt-auto">
         <Button className="hover:bg-white">
           <MdOutlineKeyboardArrowUp
-            className=" cursor-pointer bg-yellow-600 hover:translate-y-1 rounded-t-xl text-3xl px-0 right-5 mb-2 md:right-12 "
+            className=" cursor-pointer bg-yellow-600 hover:translate-y-1 transition ease-in duration-200 rounded-t-xl text-3xl px-0 right-5 mb-2 md:right-12 "
             onClick={() => scrollTo({ y: 0 })}
           />
         </Button>

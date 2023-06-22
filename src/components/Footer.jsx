@@ -13,21 +13,21 @@ const Footer = () => {
       <a
         href="https://m.facebook.com/khai.lek.5264"
         target="blank"
-        className="cursor-pointer select-non text-3xl md:text-4xl text-gray-50 hover:text-gray-400"
+        className="cursor-pointer select-non text-3xl md:text-4xl text-gray-50 hover:text-gray-400 transition ease-in duration-200"
       >
         <AiFillFacebook />
       </a>
       <a
         href="https://www.linkedin.com/in/jl-khai-635328278/"
         target="blank"
-        className="cursor-pointer select-none text-3xl md:text-4xl  text-gray-50 hover:text-gray-400"
+        className="cursor-pointer select-none text-3xl md:text-4xl  text-gray-50 hover:text-gray-400 transition ease-in duration-200"
       >
         <AiFillLinkedin />
       </a>
       <a
         href="https://github.com/JlKhai"
         target="blank"
-        className="cursor-pointer select-none text-3xl md:text-4xl  text-gray-50 hover:text-gray-400"
+        className="cursor-pointer select-none text-3xl md:text-4xl  text-gray-50 hover:text-gray-400 transition ease-in duration-200"
       >
         <AiFillGithub />
       </a>

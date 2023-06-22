@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-10 flex  justify-around bg-teal-700 p-5">
       <Link to={'/'}>
-        <div className=" flex flex-col md:flex-row items-center hover:opacity-70 md:gap-2">
+        <div className=" flex flex-col md:flex-row items-center hover:opacity-70 transition ease-in duration-200 md:gap-2">
           <FcShop className="text-2xl md:text-4xl  " />
           <h2 className="text-sm md:text-2xl  font-bold text-white cursor-pointer select-none">
             My Shop
@@ -26,10 +26,10 @@ const Navbar = () => {
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
-          className=" bg-gray-300 px-2 py-2 outline-none rounded"
+          className="focus:bg-gray-200 transition ease-in duration-200 bg-gray-300 px-3 md:px-4 py-2 outline-none rounded-full"
         />
         <Link to={'/cart'}>
-          <div className="relative hover:opacity-60">
+          <div className="relative hover:opacity-60 transition ease-in duration-200">
             <FaShoppingCart className=" text-yellow-400 text-3xl cursor-pointer select-none" />
             <span className=" absolute bottom-6 left-6 h-5 w-5 rounded-[100%] flex items-center justify-center bg-white text-teal-500 cursor-pointer select-none">
               {cart.length}

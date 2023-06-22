@@ -6,7 +6,7 @@ const Product = (props) => {
 
   const { dispatch } = useContextCustom()
   return (
-    <div className=" w-[260px] h-[360px] rounded-lg shadow-2xl hover:scale-110 transition duration-150 hover:ease-in-out p-7">
+    <div className=" w-[260px] h-[360px] rounded-lg shadow-2xl hover:scale-110 transition duration-300 ease-in p-7">
       <Link to={`/detail/${id}`}>
         <img src={image} className="max-w-[100%] h-[50%] mx-auto rounded" />
         <div className="mt-4 flex flex-col h-[35%] ">
@@ -21,7 +21,7 @@ const Product = (props) => {
       </Link>
       <div className=" mt-auto">
         <button
-          className="w-[100%] select-none px-4 py-2 rounded bg-sky-500  hover:bg-sky-700 text-white"
+          className="w-[100%] select-none px-4 py-2 rounded-full bg-sky-500  hover:bg-sky-600 transition ease-in duration-200 text-white"
           onClick={() => dispatch({ type: 'ADD_TO_CART', payload: props })}
         >
           Add to Cart

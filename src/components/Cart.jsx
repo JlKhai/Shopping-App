@@ -48,7 +48,7 @@ const Cart = () => {
           <div className="flex justify-center">
             <button
               onClick={() => dispatch({ type: 'REMOVE_CART' })}
-              className="shadow-lg mt-5 font-bold font-serif px-6 py-2 text-yellow-500 hover:text-white hover:bg-red-600 border border-none rounded-lg "
+              className="shadow mt-5 font-bold font-serif px-6 py-2 text-yellow-500 hover:text-white hover:bg-red-600  transition ease-in duration-500 border border-none rounded-lg "
             >
               Clear Cart
             </button>
@@ -64,7 +64,7 @@ const Cart = () => {
               Please fill your cart first.
             </h1>
             <Link to={'/'}>
-              <button className="mt-5 font-mono text-white  hover:bg-yellow-500 btn btn-active btn-accent">
+              <button className="mt-5 font-mono text-white  hover:bg-teal-600 transition ease-in duration-200 btn btn-active btn-accent">
                 Fill Cart
               </button>
             </Link>
